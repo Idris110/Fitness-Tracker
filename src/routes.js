@@ -85,17 +85,17 @@ const routes = [
   //   component: <Register />,
   // },
   {
-    name: "Static Coupon",
+    name: "Create Schedule",
     layout: "/admin",
-    path: "createStaticCoupon",
-    icon: <MdLoyalty className="h-6 w-6" />,
+    path: "create-schedule",
+    icon: <MdStackedBarChart className="h-6 w-6" />,
     component: <Promo />,
   },
   {
     name: "Dynamic Coupon",
     layout: "/admin",
     path: "dynamicCoupon",
-    icon: <MdStackedBarChart className="h-6 w-6" />,
+    icon: <MdLoyalty  className="h-6 w-6" />,
     component: <DynamicCoupon />,
   },
   {

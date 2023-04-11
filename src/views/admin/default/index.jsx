@@ -4,7 +4,7 @@ import TotalSpent from "views/admin/default/components/TotalSpent";
 import PieChartCard from "views/admin/default/components/PieChartCard";
 import { IoMdHome } from "react-icons/io";
 import { IoDocuments } from "react-icons/io5";
-import { MdBarChart, MdDashboard } from "react-icons/md";
+import { MdBarChart, MdDashboard, MdTimer, MdOutlineChangeCircle, MdFoodBank } from "react-icons/md";
 
 import { columnsDataCheck, columnsDataComplex } from "./variables/columnsData";
 
@@ -23,34 +23,34 @@ const Dashboard = () => {
 
       <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
         <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={"Earnings"}
-          subtitle={"₹3400.5"}
-        />
-        <Widget
-          icon={<IoDocuments className="h-6 w-6" />}
-          title={"Redeemd"}
-          subtitle={"₹642.39"}
-        />
-        <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={"Today Sales"}
-          subtitle={"₹574.34"}
-        />
-        <Widget
           icon={<MdDashboard className="h-6 w-6" />}
-          title={"Coupon Spend"}
-          subtitle={"₹1,000"}
+          title={"Max Streak"}
+          subtitle={"4 days"}
+        />
+        <Widget
+          icon={<MdTimer className="h-7 w-7" />}
+          title={"Average Time"}
+          subtitle={"20.5 Mins"}
+        />
+        <Widget
+          icon={<MdFoodBank className="h-7 w-7" />}
+          title={"Avg Calories Burnt"}
+          subtitle={"324.14 Kcal"}
+        />
+        <Widget
+          icon={<MdTimer className="h-7 w-7" />}
+          title={"Target Time"}
+          subtitle={"25.0 Mins"}
+        />
+        <Widget
+          icon={<MdOutlineChangeCircle className="h-6 w-6" />}
+          title={"Target Calories"}
+          subtitle={"374.32 Kcal"}
         />
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
-          title={"Active Coupons"}
-          subtitle={"9"}
-        />
-        <Widget
-          icon={<IoMdHome className="h-6 w-6" />}
-          title={"Gifting"}
-          subtitle={"₹243.3"}
+          title={"Alarms Missed"}
+          subtitle={"3"}
         />
       </div>
 
