@@ -10,6 +10,12 @@ const Timer = ({ cdMin, cdhr }) => {
 
 	// The state for our timer
 	const [timer, setTimer] = useState('00:00:00');
+	const [timeUp, setTimeUp] = useState(false);
+	const [timer1, setTimer1] = useState({
+		h: '00',
+		m: '00',
+		s: '00'
+	});
 
 
 	const getTimeRemaining = (e) => {
@@ -36,6 +42,11 @@ const Timer = ({ cdMin, cdhr }) => {
 				(minutes > 9 ? minutes : '0' + minutes) + ':'
 				+ (seconds > 9 ? seconds : '0' + seconds)
 			)
+			setTimer1({ h: (hours > 9 ? hours : '0' + hours), m: (minutes > 9 ? minutes : '0' + minutes), s: (seconds > 9 ? seconds : '0' + seconds) });
+
+			if (minutes === 0 && seconds === 0) {
+				setTimeUp(true);
+			}
 		}
 	}
 
@@ -62,7 +73,10 @@ const Timer = ({ cdMin, cdhr }) => {
 
 		// This is where you need to adjust if
 		// you entend to add more time
-		deadline.setSeconds(deadline.getSeconds() + 59);
+
+
+
+		deadline.setSeconds(deadline.getSeconds() + 10);
 		deadline.setMinutes(deadline.getMinutes() + cdMin);
 		deadline.setHours(deadline.getHours() + cdhr);
 		return deadline;
@@ -86,14 +100,21 @@ const Timer = ({ cdMin, cdhr }) => {
 	}
 
 	return (
-		<div className="App">
-			<h2>{timer}</h2>
-			<figure className='fig'>
-				<div class="face top"><p className='parag' id="s">10</p></div>
-				<div class="face front"><p className='parag' id="m">52</p></div>
-				<div class="face left"><p className='parag' id="h">12</p></div>
-			</figure>
-			{/* <button onClick={onClickReset}>Reset</button> */}
+		<div className=""> 
+			<div className="App" style={{display: (timeUp === true) ? "none" : "block"}}>
+
+				<figure className='mt-10 fig'>
+					<div class="face top"><p className='parag' id="s">{timer1.h}</p></div>
+					<div class="face left"><p className='parag' id="m">{timer1.m}</p></div>
+					<div class="face front"><p className='parag' id="h">{timer1.s}</p></div>
+				</figure>
+
+				{/* <button onClick={onClickReset}>Reset</button> */}
+			</div>
+
+			{timeUp === true && (
+				<div className="m-10 flex justify-center"> <img style={{height:"600px"}} src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71nDHeoZhyL.jpg" alt="" /></div>
+			)}
 		</div>
 	)
 }

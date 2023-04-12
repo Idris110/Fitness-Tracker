@@ -29,7 +29,7 @@ const Sidebar = ({ open, onClose }) => {
           style={{ height: 50, display: "inline" }}
           alt="website logo"
         />
-          Coupon <span class="font-medium">Studio</span>
+          Cross <span class="font-medium">Trainer</span>
         </div>
       </div>
       <div class="mt-[58px] mb-7 h-px bg-gray-300 dark:bg-white/30" />

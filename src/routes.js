@@ -91,22 +91,22 @@ const routes = [
     icon: <MdStackedBarChart className="h-6 w-6" />,
     component: <Promo />,
   },
+  // {
+  //   name: "Dynamic Coupon",
+  //   layout: "/admin",
+  //   path: "dynamicCoupon",
+  //   icon: <MdLoyalty  className="h-6 w-6" />,
+  //   component: <DynamicCoupon />,
+  // },
+  // {
+  //   name: "Create Giftcard",
+  //   layout: "/admin",
+  //   path: "newGiftcard",
+  //   icon: <MdCardGiftcard className="h-6 w-6" />,
+  //   component: <Giftcard />,
+  // },
   {
-    name: "Dynamic Coupon",
-    layout: "/admin",
-    path: "dynamicCoupon",
-    icon: <MdLoyalty  className="h-6 w-6" />,
-    component: <DynamicCoupon />,
-  },
-  {
-    name: "Create Giftcard",
-    layout: "/admin",
-    path: "newGiftcard",
-    icon: <MdCardGiftcard className="h-6 w-6" />,
-    component: <Giftcard />,
-  },
-  {
-    name: "Recommended Coupon",
+    name: "Recommended Exercise",
     layout: "/admin",
     path: "recomendation",
     icon: <MdList className="h-6 w-6" />,
@@ -119,13 +119,13 @@ const routes = [
   //   icon: <MdHome className="h-6 w-6" />,
   //   component: <DeployCoupon />,
   // },
-  {
-    name: "User Specific Coupon",
-    layout: "/admin",
-    path: "userSpecific",
-    icon: <MdSupervisedUserCircle className="h-6 w-6" />,
-    component: <CustomerSpecific />,
-  },
+  // {
+  //   name: "User Specific Coupon",
+  //   layout: "/admin",
+  //   path: "userSpecific",
+  //   icon: <MdSupervisedUserCircle className="h-6 w-6" />,
+  //   component: <CustomerSpecific />,
+  // },
   {
     name: "Newsletter",
     layout: "/admin",
@@ -134,18 +134,18 @@ const routes = [
     component: <Newsletter />,
   },
   {
-    name: "Company Data",
+    name: "History",
     layout: "/admin",
     path: "companyData",
     icon: <MdSupervisedUserCircle className="h-6 w-6" />,
     component: <CompanyDetails />,
   },
-  {
-    name: "Documentation",
-    layout: "/admin",
-    path: "docs",
-    icon: <MdOutlineFilePresent className="h-6 w-6" />,
-    component: <Documentation />,
-  }
+  // {
+  //   name: "Documentation",
+  //   layout: "/admin",
+  //   path: "docs",
+  //   icon: <MdOutlineFilePresent className="h-6 w-6" />,
+  //   component: <Documentation />,
+  // }
 ];
 export default routes;
